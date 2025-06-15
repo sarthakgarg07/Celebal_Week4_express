@@ -1,0 +1,20 @@
+{
+  "name": "express-web-server",
+  "version": "1.0.0",
+  "description": "A simple Express.js web server with basic routing, middleware, controllers, and Pug templates",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": ["express", "server", "web", "routing", "middleware", "pug", "controllers"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+} 

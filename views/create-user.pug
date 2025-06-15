@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  .card
+    h1(style="color: #667eea; margin-bottom: 20px;") Create New User
+    
+    p(style="font-size: 18px; margin-bottom: 30px;") #{message}
+    
+    form(action="/users" method="POST" style="max-width: 500px;")
+      .form-group
+        label(for="name") Name
+        input#name(type="text" name="name" required placeholder="Enter user name")
+      
+      .form-group
+        label(for="email") Email
+        input#email(type="email" name="email" required placeholder="Enter user email")
+      
+      .actions
+        button.btn(type="submit") Create User
+        a.btn.btn-secondary(href="/users" style="margin-left: 10px;") Cancel 

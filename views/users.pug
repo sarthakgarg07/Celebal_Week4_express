@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  .card
+    h1(style="color: #667eea; margin-bottom: 20px;") Users
+    
+    .success
+      p #{message}
+      p Total Users: #{count}
+    
+    .user-grid
+      each user in users
+        .user-card
+          .user-name #{user.name}
+          .user-email #{user.email}
+          .user-id ID: #{user.id}
+          .user-created(style="color: #6c757d; font-size: 12px; margin-top: 10px;") Created: #{new Date(user.createdAt).toLocaleDateString()}
+          a.btn(href=`/users/${user.id}` style="margin-top: 15px; display: inline-block;") View Details
+    
+    .actions(style="margin-top: 30px;")
+      a.btn(href="/users/create") Create New User
+      a.btn.btn-secondary(href="/" style="margin-left: 10px;") Back to Home 

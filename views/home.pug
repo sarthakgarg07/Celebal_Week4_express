@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  .card
+    h1(style="color: #667eea; margin-bottom: 20px;") #{message}
+    
+    p(style="font-size: 18px; margin-bottom: 30px;") Welcome to our Express.js web server with organized middleware, controllers, and Pug templates!
+    
+    h2(style="color: #333; margin-bottom: 15px;") Available Endpoints
+    
+    .endpoints-grid(style="display: grid; gap: 15px; margin-top: 20px;")
+      each endpoint in endpoints
+        .endpoint-card(style="background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid #667eea;")
+          .method(style="font-weight: bold; color: #667eea;") #{endpoint.method}
+          .path(style="font-family: monospace; color: #333;") #{endpoint.path}
+          .description(style="color: #6c757d; font-size: 14px;") #{endpoint.description}
+    
+    .actions(style="margin-top: 30px;")
+      a.btn(href="/users") View Users
+      a.btn.btn-secondary(href="/users/create" style="margin-left: 10px;") Create User
+      a.btn.btn-secondary(href="/about" style="margin-left: 10px;") About 

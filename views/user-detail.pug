@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  .card
+    h1(style="color: #667eea; margin-bottom: 20px;") User Details
+    
+    .success
+      p #{message}
+    
+    .user-detail(style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin-top: 20px;")
+      .user-name(style="font-size: 24px; font-weight: bold; color: #333; margin-bottom: 15px;") #{user.name}
+      .user-email(style="font-size: 18px; color: #667eea; margin-bottom: 10px;") #{user.email}
+      .user-id(style="color: #6c757d; margin-bottom: 10px;") User ID: #{user.id}
+      .user-created(style="color: #6c757d;") Created: #{new Date(user.createdAt).toLocaleString()}
+    
+    .actions(style="margin-top: 30px;")
+      a.btn(href="/users") Back to Users
+      a.btn.btn-secondary(href="/" style="margin-left: 10px;") Back to Home 
